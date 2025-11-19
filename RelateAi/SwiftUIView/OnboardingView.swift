@@ -70,8 +70,8 @@ struct OnboardingView: View {
 
                     // Buttons
                     VStack(spacing: 12) {
-                        Button {
-                            handleCreateRoom()
+                        NavigationLink {
+                            CreateRoomView(displayName: displayName.isEmpty ? "You" : displayName)
                         } label: {
                             Text("Create New Relationship Room")
                                 .fontWeight(.semibold)
@@ -81,9 +81,11 @@ struct OnboardingView: View {
                                 .foregroundColor(.white)
                                 .cornerRadius(12)
                         }
+                        .disabled(displayName.trimmingCharacters(in: .whitespaces).isEmpty)
+                        .opacity(displayName.trimmingCharacters(in: .whitespaces).isEmpty ? 0.6 : 1.0)
 
-                        Button {
-                            handleJoinRoom()
+                        NavigationLink {
+                            JoinRoomView(displayName: displayName.isEmpty ? "You" : displayName)
                         } label: {
                             Text("Join Existing Room")
                                 .fontWeight(.medium)
@@ -97,7 +99,10 @@ struct OnboardingView: View {
                                         .stroke(Color.accentColor.opacity(0.4), lineWidth: 1)
                                 )
                         }
+                        .disabled(displayName.trimmingCharacters(in: .whitespaces).isEmpty)
+                        .opacity(displayName.trimmingCharacters(in: .whitespaces).isEmpty ? 0.6 : 1.0)
                     }
+
                     .padding(.top, 8)
 
                     Text("You’ll be able to invite your partner and let the AI help you mediate your conversations.")
@@ -113,13 +118,6 @@ struct OnboardingView: View {
 
                 Spacer()
             }
-        }
-        .alert(isPresented: $showingAlert) {
-            Alert(
-                title: Text("Not wired up yet"),
-                message: Text(alertMessage),
-                dismissButton: .default(Text("OK"))
-            )
         }
     }
 

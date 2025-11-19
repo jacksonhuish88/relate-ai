@@ -3,10 +3,12 @@ import SwiftUI
 struct RootTabView: View {
     var body: some View {
         TabView {
-            OnboardingView()
-                .tabItem {
-                    Label("Onboarding", systemImage: "person")
-                }
+            NavigationStack {
+                   OnboardingView()
+               }
+               .tabItem {
+                   Label("Onboarding", systemImage: "person")
+               }
 
             MainChatView()
                 .tabItem {
