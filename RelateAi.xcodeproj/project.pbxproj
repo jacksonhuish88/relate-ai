@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9CF3DABF2ECECF6A00D3EC70 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF3DABE2ECECF6A00D3EC70 /* Supabase */; };
+		9CF3DAC12ECECF7400D3EC70 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF3DAC02ECECF7400D3EC70 /* PostgREST */; };
+		9CF3DAC32ECECF7D00D3EC70 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF3DAC22ECECF7D00D3EC70 /* Realtime */; };
+		9CF3DAC52ECECF9500D3EC70 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF3DAC42ECECF9500D3EC70 /* Storage */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		9CF3DA4E2ECE33EE00D3EC70 /* RelateAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelateAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF3DAC52ECECF9500D3EC70 /* Storage in Frameworks */,
+				9CF3DAC32ECECF7D00D3EC70 /* Realtime in Frameworks */,
+				9CF3DAC12ECECF7400D3EC70 /* PostgREST in Frameworks */,
+				9CF3DABF2ECECF6A00D3EC70 /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +44,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF3DA502ECE33EE00D3EC70 /* RelateAi */,
+				9CF3DABD2ECECF6A00D3EC70 /* Frameworks */,
 				9CF3DA4F2ECE33EE00D3EC70 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +55,13 @@
 				9CF3DA4E2ECE33EE00D3EC70 /* RelateAi.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9CF3DABD2ECECF6A00D3EC70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +84,10 @@
 			);
 			name = RelateAi;
 			packageProductDependencies = (
+				9CF3DABE2ECECF6A00D3EC70 /* Supabase */,
+				9CF3DAC02ECECF7400D3EC70 /* PostgREST */,
+				9CF3DAC22ECECF7D00D3EC70 /* Realtime */,
+				9CF3DAC42ECECF9500D3EC70 /* Storage */,
 			);
 			productName = RelateAi;
 			productReference = 9CF3DA4E2ECE33EE00D3EC70 /* RelateAi.app */;
@@ -94,6 +117,9 @@
 			);
 			mainGroup = 9CF3DA452ECE33ED00D3EC70;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				9CF3DAB82ECECD4800D3EC70 /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 9CF3DA4F2ECE33EE00D3EC70 /* Products */;
 			projectDirPath = "";
@@ -328,6 +354,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9CF3DAB82ECECD4800D3EC70 /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9CF3DABE2ECECF6A00D3EC70 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CF3DAB82ECECD4800D3EC70 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		9CF3DAC02ECECF7400D3EC70 /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CF3DAB82ECECD4800D3EC70 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		9CF3DAC22ECECF7D00D3EC70 /* Realtime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CF3DAB82ECECD4800D3EC70 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Realtime;
+		};
+		9CF3DAC42ECECF9500D3EC70 /* Storage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9CF3DAB82ECECD4800D3EC70 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Storage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9CF3DA462ECE33EE00D3EC70 /* Project object */;
 }

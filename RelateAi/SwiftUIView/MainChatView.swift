@@ -155,7 +155,7 @@ struct MessageBubble: View {
                     .background(bubbleColor)
                     .foregroundColor(isFromMe ? .white : .primary)
                     .cornerRadius(16, corners: bubbleCorners)
-                    .containerRelativeFrame(.horizontal, count: 10, span: 7, spacing: <#CGFloat#>)  // 70% width
+                    .containerRelativeFrame(.horizontal, count: 10, span: 7, spacing: 16)  // 70% width
                 
             }
             
