@@ -97,7 +97,7 @@ final class BackendClient {
     func listenForMessages(
         roomId: UUID,
         onMessage: @escaping (MessageDTO) -> Void
-    ) {
+    ) -> RealtimeChannel {
         let channel = client.channel("room_\(roomId.uuidString)")
 
         // Listen to INSERTs on the messages table
@@ -128,6 +128,22 @@ final class BackendClient {
                 print("❌ Failed to subscribe to room \(roomId): \(error)")
             }
         }
+
+        return channel
+    }
+
+    // MARK: - Fetch Messages
+
+    func fetchMessages(roomId: UUID) async throws -> [MessageDTO] {
+        let messages: [MessageDTO] = try await client
+            .from("messages")
+            .select()
+            .eq("room_id", value: roomId)
+            .order("created_at", ascending: true)
+            .execute()
+            .value
+
+        return messages
     }
 
     // MARK: - Helper
