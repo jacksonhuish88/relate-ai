@@ -11,16 +11,51 @@
 		9CF3DAC12ECECF7400D3EC70 /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF3DAC02ECECF7400D3EC70 /* PostgREST */; };
 		9CF3DAC32ECECF7D00D3EC70 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF3DAC22ECECF7D00D3EC70 /* Realtime */; };
 		9CF3DAC52ECECF9500D3EC70 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 9CF3DAC42ECECF9500D3EC70 /* Storage */; };
+		9CF3DADB2ED0386500D3EC70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CF3DAD82ED0386500D3EC70 /* Assets.xcassets */; };
+		9CF3DAE62ED0386500D3EC70 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3DAD92ED0386500D3EC70 /* ContentView.swift */; };
+		9CF3DAE72ED0386500D3EC70 /* RelateAiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CF3DADA2ED0386500D3EC70 /* RelateAiApp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9CF3DA4E2ECE33EE00D3EC70 /* RelateAi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RelateAi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CF3DAD82ED0386500D3EC70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9CF3DAD92ED0386500D3EC70 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9CF3DADA2ED0386500D3EC70 /* RelateAiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelateAiApp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		9CF3DAFE2ED0395D00D3EC70 /* Exceptions for "Services" folder in "RelateAi" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				BackendClient.swift,
+				RoomService.swift,
+			);
+			target = 9CF3DA4D2ECE33EE00D3EC70 /* RelateAi */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9CF3DA502ECE33EE00D3EC70 /* RelateAi */ = {
+		9CF3DAE92ED0395D00D3EC70 /* Services */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = RelateAi;
+			exceptions = (
+				9CF3DAFE2ED0395D00D3EC70 /* Exceptions for "Services" folder in "RelateAi" target */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9CF3DAF32ED0395D00D3EC70 /* Features */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Features;
+			sourceTree = "<group>";
+		};
+		9CF3DAFF2ED0399200D3EC70 /* App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = App;
+			sourceTree = "<group>";
+		};
+		9CF3DB002ED0399900D3EC70 /* Models */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -43,7 +78,13 @@
 		9CF3DA452ECE33ED00D3EC70 = {
 			isa = PBXGroup;
 			children = (
-				9CF3DA502ECE33EE00D3EC70 /* RelateAi */,
+				9CF3DB002ED0399900D3EC70 /* Models */,
+				9CF3DAFF2ED0399200D3EC70 /* App */,
+				9CF3DAE92ED0395D00D3EC70 /* Services */,
+				9CF3DAF32ED0395D00D3EC70 /* Features */,
+				9CF3DAD82ED0386500D3EC70 /* Assets.xcassets */,
+				9CF3DAD92ED0386500D3EC70 /* ContentView.swift */,
+				9CF3DADA2ED0386500D3EC70 /* RelateAiApp.swift */,
 				9CF3DABD2ECECF6A00D3EC70 /* Frameworks */,
 				9CF3DA4F2ECE33EE00D3EC70 /* Products */,
 			);
@@ -80,7 +121,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9CF3DA502ECE33EE00D3EC70 /* RelateAi */,
+				9CF3DAF32ED0395D00D3EC70 /* Features */,
+				9CF3DAFF2ED0399200D3EC70 /* App */,
+				9CF3DB002ED0399900D3EC70 /* Models */,
 			);
 			name = RelateAi;
 			packageProductDependencies = (
@@ -135,6 +178,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF3DADB2ED0386500D3EC70 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,6 +189,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CF3DAE62ED0386500D3EC70 /* ContentView.swift in Sources */,
+				9CF3DAE72ED0386500D3EC70 /* RelateAiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
